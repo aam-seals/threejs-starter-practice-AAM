@@ -4,6 +4,7 @@ import { URDFLoader } from './assets/js/URDFLoader.module.js';
 import { GUI } from 'https://cdn.jsdelivr.net/npm/dat.gui@latest/build/dat.gui.module.js';
 
 const canvas = document.querySelector('canvas.webgl');
+const baseURL = 'https://aam-seals.github.io/threejs-starter-practice-AAM/';
 
 // Scene
 const scene = new THREE.Scene();
@@ -43,7 +44,7 @@ controls.enableDamping = true;
 const loader = new URDFLoader();
 let robot;
 loader.load(
-    'assets/drone_gripper_1/urdf/drone_gripper_1.urdf',
+    '${baseURL}assets/drone_gripper_1/urdf/drone_gripper_1.urdf',
     (urdf) => {
         robot = urdf;
         scene.add(robot);
