@@ -44,7 +44,7 @@ controls.enableDamping = true;
 const loader = new URDFLoader();
 let robot;
 loader.load(
-    '${baseURL}assets/drone_gripper_1/urdf/drone_gripper_1.urdf',
+    'https://aam-seals.github.io/threejs-starter-practice-AAM/assets/drone_gripper_1/urdf/drone_gripper_1.urdf',
     (urdf) => {
         robot = urdf;
         scene.add(robot);
