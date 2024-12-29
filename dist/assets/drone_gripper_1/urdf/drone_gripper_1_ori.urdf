@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="drone_gripper_1">
+  <link
+    name="base">
+    <inertial>
+      <origin
+        xyz="-0.00183735196086752 0.0234860109577308 0.0214712215526119"
+        rpy="0 0 0" />
+      <mass
+        value="0.331177751469564" />
+      <inertia
+        ixx="0.000408675697067768"
+        ixy="-4.41201756371136E-07"
+        ixz="2.22245968701136E-07"
+        iyy="0.000256391373319889"
+        iyz="1.21802729366082E-06"
+        izz="0.000641766877160111" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="arm_base">
+    <inertial>
+      <origin
+        xyz="0.000214188029419162 0.000193119000818306 -0.00422884963023153"
+        rpy="0 0 0" />
+      <mass
+        value="0.0169902466324884" />
+      <inertia
+        ixx="3.35386503243666E-06"
+        ixy="-3.08286405659295E-08"
+        ixz="-4.95327338127143E-08"
+        iyy="3.36424959357735E-06"
+        iyz="-4.78293502712381E-08"
+        izz="5.21656768832029E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/arm_base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.00784313725490196 0.23921568627451 0.823529411764706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/arm_base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint0"
+    type="continuous">
+    <origin
+      xyz="-0.00190278280219599 0.0137058612241111 0"
+      rpy="3.14159265358978 0 0" />
+    <parent
+      link="base" />
+    <child
+      link="arm_base" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="arm_1">
+    <inertial>
+      <origin
+        xyz="0.0257568296563545 -0.00126299965375996 0.00441041989706169"
+        rpy="0 0 0" />
+      <mass
+        value="0.00491659603305015" />
+      <inertia
+        ixx="8.51863077553168E-08"
+        ixy="1.91099720889399E-08"
+        ixz="2.05299202775821E-08"
+        iyy="1.93031929844389E-06"
+        iyz="-1.28512427911382E-09"
+        izz="1.98816626328696E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/arm_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.00784313725490196 0.23921568627451 0.823529411764706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/arm_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="continuous">
+    <origin
+      xyz="0 0 0.02536318742"
+      rpy="1.57079632679496 -1.33772141358135 0.692220818401688" />
+    <parent
+      link="arm_base" />
+    <child
+      link="arm_1" />
+    <axis
+      xyz="-0.00241346964996986 0.0101667205581756 -0.999945404988363" />
+  </joint>
+  <link
+    name="arm_2">
+    <inertial>
+      <origin
+        xyz="-0.0201537546347147 -0.000636375774419107 -0.0186190402341607"
+        rpy="0 0 0" />
+      <mass
+        value="0.00392544916661393" />
+      <inertia
+        ixx="6.26921919661817E-08"
+        ixy="-3.46838351753242E-08"
+        ixz="-9.24440130601162E-08"
+        iyy="1.29047395692567E-06"
+        iyz="-2.14033813486207E-09"
+        izz="1.31731826590204E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/arm_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.00784313725490196 0.23921568627451 0.823529411764706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/arm_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="continuous">
+    <origin
+      xyz="0.0587231634536141 0.000148030136126555 -0.00726018904940746"
+      rpy="-3.14159265358979 -0.0931773449956951 1.80387124000846" />
+    <parent
+      link="arm_1" />
+    <child
+      link="arm_2" />
+    <axis
+      xyz="-0.0826335630946453 0 0.996579998921453" />
+  </joint>
+  <link
+    name="grip_base">
+    <inertial>
+      <origin
+        xyz="0.00203227581194931 -0.0755497719879831 -0.0124028769093804"
+        rpy="0 0 0" />
+      <mass
+        value="0.000106253766819768" />
+      <inertia
+        ixx="1.88428826016347E-09"
+        ixy="1.56816965151288E-23"
+        ixz="-8.84049279666048E-24"
+        iyy="2.91385335431472E-09"
+        iyz="-3.31934522017046E-12"
+        izz="1.8848621371562E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/grip_base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/grip_base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="grip_base_j"
+    type="fixed">
+    <origin
+      xyz="0.0140365794953349 0.00918773237832539 -0.00598013056319967"
+      rpy="0.0979171243878261 -0.563754204668345 -1.61877069975468" />
+    <parent
+      link="arm_2" />
+    <child
+      link="grip_base" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="grip_3">
+    <inertial>
+      <origin
+        xyz="0.00218834584242978 -0.00450039151208766 -0.000600000000000003"
+        rpy="0 0 0" />
+      <mass
+        value="4.72948810577953E-05" />
+      <inertia
+        ixx="3.88760140565519E-10"
+        ixy="2.24908598889265E-10"
+        ixz="3.6189151799195E-25"
+        iyy="2.74266315667245E-10"
+        iyz="-2.32644547280539E-25"
+        izz="6.4161336432179E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/grip_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/grip_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="grip_j_3"
+    type="continuous">
+    <origin
+      xyz="0.00263227581194946 -0.0812803871563409 -0.0196242766751848"
+      rpy="-1.5707963267949 0.785718928489839 -1.5707963267949" />
+    <parent
+      link="grip_base" />
+    <child
+      link="grip_3" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="grip_2">
+    <inertial>
+      <origin
+        xyz="-0.00442200197120168 -0.00234270780398207 -0.000600000000000003"
+        rpy="0 0 0" />
+      <mass
+        value="4.72948810577953E-05" />
+      <inertia
+        ixx="2.89953474986153E-10"
+        ixy="-2.28328433969679E-10"
+        ixz="-9.04728794979874E-26"
+        iyy="3.73072981246611E-10"
+        iyz="-2.19719850209398E-25"
+        izz="6.4161336432179E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/grip_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/grip_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="grip_2_j"
+    type="continuous">
+    <origin
+      xyz="0.00796765871918628 -0.081280387156332 -0.00830466143292058"
+      rpy="-0.395095332965627 -0.353077010917274 0.878515780434203" />
+    <parent
+      link="grip_base" />
+    <child
+      link="grip_2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="grip_1">
+    <inertial>
+      <origin
+        xyz="-0.001147793239485 -0.00487082662055863 -0.000600000000000009"
+        rpy="0 0 0" />
+      <mass
+        value="4.72948810577952E-05" />
+      <inertia
+        ixx="5.63342500223771E-10"
+        ixy="-1.07831087098443E-11"
+        ixz="-4.8467614016779E-27"
+        iyy="9.96839560089897E-11"
+        iyz="7.32062920045099E-28"
+        izz="6.41613364321787E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/grip_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/grip_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="grip_j_1"
+    type="continuous">
+    <origin
+      xyz="-0.00450310709531526 -0.0812803871563425 -0.00934389191744596"
+      rpy="3.11559761188849 -0.523013103786022 -3.08958498343711" />
+    <parent
+      link="grip_base" />
+    <child
+      link="grip_1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="motor_4">
+    <inertial>
+      <origin
+        xyz="0.000695621771873373 0.000721165330689619 -0.0219385365182269"
+        rpy="0 0 0" />
+      <mass
+        value="0.0182263997790312" />
+      <inertia
+        ixx="4.01214621124044E-06"
+        ixy="4.95663829251268E-07"
+        ixz="2.74819369639093E-08"
+        iyy="4.01214903765658E-06"
+        iyz="2.74974509955742E-08"
+        izz="2.15763150234275E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/motor_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/motor_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_j_4"
+    type="continuous">
+    <origin
+      xyz="-0.1424417912 -0.145260438439791 0.01897384868937"
+      rpy="-1.5707963267949 0.785398163397448 -0.78539816339745" />
+    <parent
+      link="base" />
+    <child
+      link="motor_4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="prop_4">
+    <inertial>
+      <origin
+        xyz="-0.00260497417230737 -0.00326880962891066 0.00531815136110944"
+        rpy="0 0 0" />
+      <mass
+        value="0.0022878451385303" />
+      <inertia
+        ixx="7.32642478917712E-07"
+        ixy="5.10575258280001E-07"
+        ixz="4.38931379045592E-09"
+        iyy="4.56336123212192E-07"
+        iyz="-3.20330300820537E-09"
+        izz="1.18584452926182E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/prop_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/prop_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_4_j"
+    type="continuous">
+    <origin
+      xyz="-0.0125428685755495 -0.0115637353057587 -0.0282970755018481"
+      rpy="1.5707963267949 -0.785398163397449 -0.785398163397449" />
+    <parent
+      link="motor_4" />
+    <child
+      link="prop_4" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="motor_1">
+    <inertial>
+      <origin
+        xyz="0.00134059309408734 -7.61956493547482E-05 0.021406736722959"
+        rpy="0 0 0" />
+      <mass
+        value="0.0182263660095419" />
+      <inertia
+        ixx="4.01215712789077E-06"
+        ixy="-4.95651274729463E-07"
+        ixz="2.7494396208725E-08"
+        iyy="4.01214429797782E-06"
+        iyz="-2.74845085230169E-08"
+        izz="2.15760711690532E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/motor_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/motor_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_1_j"
+    type="continuous">
+    <origin
+      xyz="-0.1737417912 0.202630085172958 0.01897384868937"
+      rpy="1.5707963267949 0.785398163397448 0.785398163397452" />
+    <parent
+      link="base" />
+    <child
+      link="motor_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="prop_1">
+    <inertial>
+      <origin
+        xyz="-0.00274719720603697 0.0030142110768199 0.00531815927213076"
+        rpy="0 0 0" />
+      <mass
+        value="0.00228781223397594" />
+      <inertia
+        ixx="5.25073921299612E-07"
+        ixy="-5.24361151657708E-07"
+        ixz="-2.9052284122216E-09"
+        iyy="6.63900797272882E-07"
+        iyz="-4.5919202135994E-09"
+        izz="1.18584064092141E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/prop_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/prop_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_j_1"
+    type="continuous">
+    <origin
+      xyz="-0.011536131372133 0.0125704725091749 0.0149950992460948"
+      rpy="-1.5707963267949 -0.785398163397451 0.785398163397449" />
+    <parent
+      link="motor_1" />
+    <child
+      link="prop_1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="motor_2">
+    <inertial>
+      <origin
+        xyz="0.000257675071747208 -0.000727971078348082 0.00680045453676498"
+        rpy="0 0 0" />
+      <mass
+        value="0.0182263997790352" />
+      <inertia
+        ixx="3.51644688274131E-06"
+        ixy="-1.41320825098257E-12"
+        ixz="1.09651732846124E-11"
+        iyy="4.50777452818736E-06"
+        iyz="-3.88762985442066E-08"
+        izz="2.15763148928618E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/motor_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/motor_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_j_2"
+    type="continuous">
+    <origin
+      xyz="0.158788329048069 0.193121052647772 0.0187"
+      rpy="1.5707963267949 0 -0.785398163397449" />
+    <parent
+      link="base" />
+    <child
+      link="motor_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="prop_2">
+    <inertial>
+      <origin
+        xyz="5.8195233457306E-05 -0.00360033118201913 0.0123641134712593"
+        rpy="0 0 0" />
+      <mass
+        value="0.00228777713455666" />
+      <inertia
+        ixx="8.39111206967774E-08"
+        ixy="1.38155885773495E-07"
+        ixz="5.36887956285332E-09"
+        iyy="1.10506281513806E-06"
+        iyz="8.3864756592969E-10"
+        izz="1.18583982065703E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/prop_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/prop_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_j_2"
+    type="continuous">
+    <origin
+      xyz="0.000522455765777759 0.01027384868937 -0.000110965612503178"
+      rpy="1.5707963267949 0 -3.14159265358979" />
+    <parent
+      link="motor_2" />
+    <child
+      link="prop_2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="motor_3">
+    <inertial>
+      <origin
+        xyz="-0.000340593073787475 -0.00107619562270902 0.0252623107999657"
+        rpy="0 0 0" />
+      <mass
+        value="0.0182263660848712" />
+      <inertia
+        ixx="4.01213708898894E-06"
+        ixy="4.95651290034428E-07"
+        ixz="2.74943803524921E-08"
+        iyy="4.01212425793855E-06"
+        iyz="2.74845291139644E-08"
+        izz="2.15760715532736E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/motor_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/motor_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_j_3"
+    type="continuous">
+    <origin
+      xyz="0.135936225596693 -0.14326043844 0.01897384868937"
+      rpy="1.5707963267949 -0.78539816339745 0.785398163397448" />
+    <parent
+      link="base" />
+    <child
+      link="motor_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="prop_3">
+    <inertial>
+      <origin
+        xyz="-0.000809624120667624 0.00353561422696858 -0.00160999763135484"
+        rpy="0 0 0" />
+      <mass
+        value="0.00228783690268572" />
+      <inertia
+        ixx="2.20088054153334E-07"
+        ixy="-3.73625878341654E-07"
+        ixz="-5.40401269205673E-09"
+        iyy="9.68885262963571E-07"
+        iyz="-5.70137240859949E-10"
+        izz="1.18583925774112E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/prop_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_gripper_1/meshes/prop_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_j_3"
+    type="continuous">
+    <origin
+      xyz="0.0147617103710676 0.0145890076977606 0.0321247030024744"
+      rpy="1.57079632679489 0.239110107523199 -0.78539816339745" />
+    <parent
+      link="motor_3" />
+    <child
+      link="prop_3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
